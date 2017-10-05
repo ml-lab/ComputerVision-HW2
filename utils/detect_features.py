@@ -1,6 +1,7 @@
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
+from nonmaxsuppts import nonmaxsuppts
 
 def conv(img, kernel):
     """ convolution kernel is assumed 3x3 """
@@ -60,10 +61,6 @@ def detect_features(image):
     g_x, g_y = gradients(gray)
     l_1, l_2 = fit_elliptical_disk(g_x, g_y)
     cor = cornerness(l_1, l_2)
-    plt.imshow(cor, cmap='gray')
-    plt.show()
-    exit(0)
-
-    pixel_coords = list()
+    pixel_coords = nonmaxsuppts(cor, 2, 0.01 * cor.max())
 
     return pixel_coords
