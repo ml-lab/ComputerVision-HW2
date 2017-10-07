@@ -61,6 +61,6 @@ def detect_features(image):
     g_x, g_y = gradients(gray)
     l_1, l_2 = fit_elliptical_disk(g_x, g_y)
     cor = cornerness(l_1, l_2)
-    pixel_coords = nonmaxsuppts(cor, 2, 0.01 * cor.max())
+    pixel_coords = nonmaxsuppts(cor, 2, 0.2 * cor.max())
 
     return pixel_coords

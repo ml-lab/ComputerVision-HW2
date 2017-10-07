@@ -1,6 +1,36 @@
+import numpy as np
 import cv2
-import numpy
 import matplotlib.pyplot as plt
+
+def get_patches(img, coords):
+    ret = []
+    for y, x in coords:
+        ret.append(img[y - 2 : y + 3, x - 2 : x + 3, :])
+    return ret
+
+def ssd_dist(pat_1, pat_2):
+    return np.sum((pat_1 - pat_2) ** 2)
+
+def get_best(pat_test, pat_2_ref):
+    ret = []
+    for pat_1 in pat_test:
+        min_dst = 1e16
+        min_idx = 0
+        for idx in range(len(pat_2_ref)):
+            dist = ssd_dist(pat_1, pat_2_ref[idx])
+            if dist < min_dst:
+                min_dst = dist
+                min_idx = idx
+        ret.append(min_idx)
+    return ret
+
+def marriage(bst_1, bst_2):
+    ret = []
+    for idx in range(len(bst_1)):
+        ref_1 = bst_1[idx]
+        if bst_2[ref_1] == idx:
+            ret.append([idx, ref_1])
+    return ret
 
 def match_features(feature_coords1,feature_coords2,image1,image2):
     """
@@ -14,6 +44,10 @@ def match_features(feature_coords1,feature_coords2,image1,image2):
         matches (list of tuples): list of index pairs of possible matches. For example, if the 4-th feature in feature_coords1 and the 0-th feature
                                   in feature_coords2 are determined to be matches, the list should contain (4,0).
     """
-	
-    matches = list()    
+
+    pat_1 = get_patches(image1, feature_coords1)
+    pat_2 = get_patches(image2, feature_coords2)
+    bst_1 = get_best(pat_1, pat_2)
+    bst_2 = get_best(pat_2, pat_1)
+    matches = marriage(bst_1, bst_2)
     return matches
