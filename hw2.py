@@ -35,7 +35,7 @@ matches = np.load('tmp/matches.npy')
 # utils.visualize.show_matches(img, img2, cns, cns2, matches, show=True)
 
 """ affine """
-matrix = utils.compute_affine_xform.compute_affine_xform(matches,
+matrix = utils.compute_proj_xform.compute_proj_xform(matches,
         cns, cns2, img, img2)
-utils.compute_affine_xform.visualize_ransac(matrix, matches, cns, cns2, img, img2, show=True)
+utils.compute_proj_xform.visualize_ransac(matrix, matches, cns, cns2, img, img2, show=True)
 print matrix
