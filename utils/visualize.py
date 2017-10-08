@@ -17,13 +17,13 @@ def show_corners(img, corners, show=False):
     else:
         return out
 
-def show_matches(img1, img2, coords1, coords2, mathces, show=False):
+def show_matches(img1, img2, coords1, coords2, matches, show=False):
     img_h = max(img1.shape[0], img2.shape[0])
     img_w = img1.shape[1] + img2.shape[1]
     out = np.zeros((img_h, img_w, 3), dtype=img1.dtype)
     out[0 : img1.shape[0], : img1.shape[1], :] = img1
     out[0 : img2.shape[0], img1.shape[1] :, :] = img2
-    for m_1, m_2 in mathces:
+    for m_1, m_2 in matches:
         h_1, w_1 = coords1[m_1]
         h_2, w_2 = coords2[m_2]
         w_2 += img1.shape[1]

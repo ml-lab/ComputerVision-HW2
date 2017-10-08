@@ -2,10 +2,12 @@ import numpy as np
 import cv2
 import matplotlib.pyplot as plt
 
-def get_patches(img, coords):
+def get_patches(img, coords, k=20):
     ret = []
+    pad = np.zeros((img.shape[0] + 2 * k, img.shape[1] + 2 * k, 3), dtype=img.dtype)
+    pad[k : -k, k : -k, :] = img
     for y, x in coords:
-        ret.append(img[y - 2 : y + 3, x - 2 : x + 3, :])
+        ret.append(pad[y : y + 2 * k + 1, x : x + 2 * k + 1, :])
     return ret
 
 def ssd_dist(pat_1, pat_2):
