@@ -86,7 +86,6 @@ def ransac(matches, features1, features2, ran_round=1000):
         if rat > max_rat:
             max_rat = rat
             max_mat = matrix.copy()
-    print max_rat
     return matrix
 
 def visualize_ransac(matrix, matches, coords1, coords2, img1, img2, thres=10, show=False):
