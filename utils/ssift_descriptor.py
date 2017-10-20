@@ -100,6 +100,6 @@ def match_features(feature_coords1, feature_coords2, image1, image2):
                 sim_2nd = max_sim
                 max_sim = sim
                 max_idx = j
-        if sim_2nd / max_sim < 0.9:
+        if sim_2nd / max_sim < 0.75:
             ret.append([i, max_idx])
     return ret
