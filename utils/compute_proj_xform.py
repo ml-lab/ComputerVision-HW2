@@ -62,6 +62,8 @@ def evaluate(matches, features1, features2, matrix, thres=10):
     return float(acc) / tlt
 
 def ransac(matches, features1, features2, thres, ran_round=200):
+    if len(matches) < 4:
+        return None
     max_rat, max_mat = 0.0, None
     for ran_idx in range(ran_round):
         mat_1, mat_2, mat_3, mat_4 = 0, 0, 0, 0
@@ -124,7 +126,7 @@ def compute_proj_xform(matches,features1,features2,image1,image2):
         proj_xform (numpy.ndarray): a 3x3 Projective transformation matrix between the two images, computed using the matches.
     """
     np.random.seed(1)
-    thres = image1.shape[0] / 20
+    thres = max(image1.shape[0] / 20, 1)
     proj_xform = ransac(matches, features1, features2, thres)
 
     return proj_xform

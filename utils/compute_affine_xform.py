@@ -49,6 +49,8 @@ def evaluate(matches, features1, features2, matrix, thres=10):
     return float(acc) / tlt
 
 def ransac(matches, features1, features2, thres, ran_round=200):
+    if len(matches) < 3:
+        return None
     max_rat, max_mat = 0.0, None
     for ran_idx in range(ran_round):
         mat_1, mat_2, mat_3 = 0, 0, 0
@@ -106,7 +108,7 @@ def compute_affine_xform(matches,features1,features2,image1,image2):
     Returns:
         affine_xform (numpy.ndarray): a 3x3 Affine transformation matrix between the two images, computed using the matches.
     """
-    thres = image1.shape[0] / 20
+    thres = max(image1.shape[0] / 20, 1)
     np.random.seed(1)
     affine_xform = ransac(matches, features1, features2, thres)
 
