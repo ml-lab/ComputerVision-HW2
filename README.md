@@ -1,5 +1,8 @@
 EN.601.661 – Computer Vision - Homework 2
 -----------------------------------------
+### To View This
+This is a readme written in markdown. You can access [here](https://github.com/joe-siyuan-qiao/ComputerVision-HW2) to view it online.
+
 ### How to Run
 ```bash
 # The results will be found in ./results/
@@ -56,6 +59,7 @@ The corner detection result of wall3
 ### The Matching Results using the Sum-of-Squared-Distance
 bikes1 and bikes2  
 ![ssd matching bikes1 and bikes2](results/bikes1_bikes2_matches.png)
+The matching between the two images seems very good.
 
 bikes1 and bikes3  
 ![ssd matching bikes1 and bikes3](results/bikes1_bikes3_matches.png)
