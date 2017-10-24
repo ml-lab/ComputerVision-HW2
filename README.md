@@ -202,7 +202,7 @@ wall1 and wall3
 ![ransac wall1 and wall3](results/wall3_ssift_affine_ransac_with_wall1.png)
 ![stitch wall1 and wall3](results/wall3_ssift_affine_stitch_with_wall1.png)
 
-### RANSAC and Stitching using Perspective and SSD
+### RANSAC and Stitching using Perspective and SSIFT
 bikes1 and bikes2  
 ![ransac bikes1 and bikes2](results/bikes2_ssift_perspective_ransac_with_bikes1.png)
 ![stitch bikes1 and bikes2](results/bikes2_ssift_perspective_stitch_with_bikes1.png)
