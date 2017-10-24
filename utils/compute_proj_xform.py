@@ -90,7 +90,8 @@ def ransac(matches, features1, features2, thres, ran_round=200):
             max_mat = matrix.copy()
     return max_mat
 
-def visualize_ransac(matrix, matches, coords1, coords2, img1, img2, thres=10, show=False):
+def visualize_ransac(matrix, matches, coords1, coords2, img1, img2, show=False):
+    thres = max(img1.shape[0] / 20, 1)
     img_h = max(img1.shape[0], img2.shape[0])
     img_w = img1.shape[1] + img2.shape[1]
     out = np.zeros((img_h, img_w, 3), dtype=img1.dtype)

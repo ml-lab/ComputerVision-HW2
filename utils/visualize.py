@@ -35,3 +35,13 @@ def show_matches(img1, img2, coords1, coords2, matches, show=False):
     else:
         return out
 
+def show_stitch(img1, img2, show=False):
+    img_h = max(img1.shape[0], img2.shape[0])
+    img_w = max(img1.shape[1], img2.shape[1])
+    out = np.zeros((img_h, img_w, 3), dtype=img1.dtype)
+    out[0 : img1.shape[0], 0 : img1.shape[1], :] += img1 / 2
+    out[0 : img2.shape[0], 0 : img2.shape[1], :] += img2 / 2
+    if show:
+        show_bgr(out)
+    else:
+        return out
