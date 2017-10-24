@@ -96,36 +96,36 @@ This is probably due to the fact that the walls have repeating patterns and ever
 
 ### The Matching Results using the Simple-SIFT
 bikes1 and bikes2  
-![ssift matching bikes1 and bikes2](results/bikes1_bikes2_ssift_matches.png)
+![ssift matching bikes1 and bikes2](results/bikes1_bikes2_ssift_matches.png)  
 The matchings between the two images look very good.
 
 bikes1 and bikes3  
-![ssift matching bikes1 and bikes3](results/bikes1_bikes3_ssift_matches.png)
+![ssift matching bikes1 and bikes3](results/bikes1_bikes3_ssift_matches.png)  
 The matchings between the two images look very good.
 
 graf1 and graf2  
-![ssift matching graf1 and graf2](results/graf1_graf2_ssift_matches.png)
+![ssift matching graf1 and graf2](results/graf1_graf2_ssift_matches.png)  
 The matchings between the two images look very good.
 
 graf1 and graf3  
-![ssift matching graf1 and graf3](results/graf1_graf3_ssift_matches.png)
+![ssift matching graf1 and graf3](results/graf1_graf3_ssift_matches.png)  
 The matchings between the two images are not very ideal.
 This is probably due to the big rotation which change the appearance.
 
 leuven1 and leuven2  
-![ssift matching leuven1 and leuven2](results/leuven1_leuven2_ssift_matches.png)
+![ssift matching leuven1 and leuven2](results/leuven1_leuven2_ssift_matches.png)  
 The matchings between the two images look very good.
 
 leuven1 and leuven3  
-![ssift matching leuven1 and leuven3](results/leuven1_leuven3_ssift_matches.png)
+![ssift matching leuven1 and leuven3](results/leuven1_leuven3_ssift_matches.png)  
 The matchings between the two images look very good.
 
 wall1 and wall2  
-![ssift matching wall1 and wall2](results/wall1_wall2_ssift_matches.png)
+![ssift matching wall1 and wall2](results/wall1_wall2_ssift_matches.png)  
 The matchings between the two images are sparse but accurate.
 
 wall1 and wall3  
-![ssift matching wall1 and wall3](results/wall1_wall3_ssift_matches.png)
+![ssift matching wall1 and wall3](results/wall1_wall3_ssift_matches.png)  
 The matchings between the two images are not very ideal.
 This is probably due to the big rotation that changes the distributions of the gradients.
 
@@ -133,112 +133,140 @@ This is probably due to the big rotation that changes the distributions of the g
 bikes1 and bikes2  
 ![ransac bikes1 and bikes2](results/bikes2_affine_ransac_with_bikes1.png)
 ![stitch bikes1 and bikes2](results/bikes2_affine_stitch_with_bikes1.png)
+The alignment between the two images looks very good.
 
 bikes1 and bikes3  
 ![ransac bikes1 and bikes3](results/bikes3_affine_ransac_with_bikes1.png)
 ![stitch bikes1 and bikes3](results/bikes3_affine_stitch_with_bikes1.png)
+The alignment between the two images looks very good.
 
 graf1 and graf2  
 ![ransac graf1 and graf2](results/graf2_affine_ransac_with_graf1.png)
 ![stitch graf1 and graf2](results/graf2_affine_stitch_with_graf1.png)
+The alignment between the two images looks very good.
 
 graf1 and graf3  
 ![ransac graf1 and graf3](results/graf3_affine_ransac_with_graf1.png)
 ![stitch graf1 and graf3](results/graf3_affine_stitch_with_graf1.png)
+The alignment between the two images is not ideal.
+This is because the matching results are not ideal, which is due to the big rotation that changes the appearance.
 
 leuven1 and leuven2  
 ![ransac leuven1 and leuven2](results/leuven2_affine_ransac_with_leuven1.png)
 ![stitch leuven1 and leuven2](results/leuven2_affine_stitch_with_leuven1.png)
+The alignment between the two images is not ideal.
+This is because the matching results are not ideal, which is due to the big lighting difference between the images.
 
 leuven1 and leuven3  
 ![ransac leuven1 and leuven3](results/leuven3_affine_ransac_with_leuven1.png)
 ![stitch leuven1 and leuven3](results/leuven3_affine_stitch_with_leuven1.png)
+The alignment between the two images is not ideal.
+This is because the matching results are not ideal, which is due to the big lighting difference between the images.
 
 wall1 and wall2  
 ![ransac wall1 and wall2](results/wall2_affine_ransac_with_wall1.png)
 ![stitch wall1 and wall2](results/wall2_affine_stitch_with_wall1.png)
+The alignment between the two images is not ideal.
+This is because the matching results are not ideal, which is due to the fact that the walls have repeating patterns.
 
 wall1 and wall3  
 ![ransac wall1 and wall3](results/wall3_affine_ransac_with_wall1.png)
 ![stitch wall1 and wall3](results/wall3_affine_stitch_with_wall1.png)
+The alignment between the two images is not ideal.
+This is because the matching results are not ideal, which is due to the fact that the walls have repeating patterns.
+Besides, the rotation is also big.
 
 ### RANSAC and Stitching using Perspective and SSD
 bikes1 and bikes2  
 ![ransac bikes1 and bikes2](results/bikes2_perspective_ransac_with_bikes1.png)
 ![stitch bikes1 and bikes2](results/bikes2_perspective_stitch_with_bikes1.png)
+The alignment between the two images looks very good.
 
 bikes1 and bikes3  
 ![ransac bikes1 and bikes3](results/bikes3_perspective_ransac_with_bikes1.png)
 ![stitch bikes1 and bikes3](results/bikes3_perspective_stitch_with_bikes1.png)
+The alignment between the two images looks very good.
 
 graf1 and graf2  
 ![ransac graf1 and graf2](results/graf2_perspective_ransac_with_graf1.png)
 ![stitch graf1 and graf2](results/graf2_perspective_stitch_with_graf1.png)
+The alignment between the two images looks very good.
 
 graf1 and graf3  
 ![ransac graf1 and graf3](results/graf3_perspective_ransac_with_graf1.png)
 ![stitch graf1 and graf3](results/graf3_perspective_stitch_with_graf1.png)
+The alignment between the two images is not ideal.
+This is because the matching results are not ideal, which is due to the big rotation that changes the appearance.
 
 leuven1 and leuven2  
 ![ransac leuven1 and leuven2](results/leuven2_perspective_ransac_with_leuven1.png)
 ![stitch leuven1 and leuven2](results/leuven2_perspective_stitch_with_leuven1.png)
+The alignment between the two images is not ideal.
+This is because the matching results are not ideal, which is due to the big lighting difference between the images.
 
 leuven1 and leuven3  
 ![ransac leuven1 and leuven3](results/leuven3_perspective_ransac_with_leuven1.png)
 ![stitch leuven1 and leuven3](results/leuven3_perspective_stitch_with_leuven1.png)
+The alignment between the two images is not ideal.
+This is because the matching results are not ideal, which is due to the big lighting difference between the images.
 
 wall1 and wall2  
 ![ransac wall1 and wall2](results/wall2_perspective_ransac_with_wall1.png)
 ![stitch wall1 and wall2](results/wall2_perspective_stitch_with_wall1.png)
+The alignment between the two images is not ideal.
+This is because the matching results are not ideal, which is due to the fact that the walls have repeating patterns.
 
 wall1 and wall3  
 ![ransac wall1 and wall3](results/wall3_perspective_ransac_with_wall1.png)
 ![stitch wall1 and wall3](results/wall3_perspective_stitch_with_wall1.png)
+The alignment between the two images is not ideal.
+This is because the matching results are not ideal, which is due to the fact that the walls have repeating patterns.
+Besides, the rotation is also big.
 
 ### RANSAC and Stitching using Affine and SSIFT
 bikes1 and bikes2  
 ![ransac bikes1 and bikes2](results/bikes2_ssift_affine_ransac_with_bikes1.png)
-![stitch bikes1 and bikes2](results/bikes2_ssift_affine_stitch_with_bikes1.png)
+![stitch bikes1 and bikes2](results/bikes2_ssift_affine_stitch_with_bikes1.png)  
 Using SSIFT produces similar but a little bit worse result.
 This is probably due to that the second image is blurred thus has less clear gradients.
 
 bikes1 and bikes3  
 ![ransac bikes1 and bikes3](results/bikes3_ssift_affine_ransac_with_bikes1.png)
-![stitch bikes1 and bikes3](results/bikes3_ssift_affine_stitch_with_bikes1.png)
+![stitch bikes1 and bikes3](results/bikes3_ssift_affine_stitch_with_bikes1.png)  
 Using SSIFT produces similar but a little bit worse result.
 This is probably due to that the third image is blurred thus has less clear gradients.
 
 graf1 and graf2  
 ![ransac graf1 and graf2](results/graf2_ssift_affine_ransac_with_graf1.png)
-![stitch graf1 and graf2](results/graf2_ssift_affine_stitch_with_graf1.png)
+![stitch graf1 and graf2](results/graf2_ssift_affine_stitch_with_graf1.png)  
 Using SSIFT produces similar result.
 
 graf1 and graf3  
 ![ransac graf1 and graf3](results/graf3_ssift_affine_ransac_with_graf1.png)
-![stitch graf1 and graf3](results/graf3_ssift_affine_stitch_with_graf1.png)
+![stitch graf1 and graf3](results/graf3_ssift_affine_stitch_with_graf1.png)  
 Using SSIFT cannot produce good result, either.
 
 leuven1 and leuven2  
 ![ransac leuven1 and leuven2](results/leuven2_ssift_affine_ransac_with_leuven1.png)
-![stitch leuven1 and leuven2](results/leuven2_ssift_affine_stitch_with_leuven1.png)
+![stitch leuven1 and leuven2](results/leuven2_ssift_affine_stitch_with_leuven1.png)  
 Using SSIFT produces result that is much better than using SSD.
 This is because the lighting changes do not change the distribution of gradients too much.
 
 leuven1 and leuven3  
 ![ransac leuven1 and leuven3](results/leuven3_ssift_affine_ransac_with_leuven1.png)
-![stitch leuven1 and leuven3](results/leuven3_ssift_affine_stitch_with_leuven1.png)
+![stitch leuven1 and leuven3](results/leuven3_ssift_affine_stitch_with_leuven1.png)  
 Using SSIFT produces result that is much better than using SSD.
 This is because the lighting changes do not change the distribution of gradients too much.
 
 wall1 and wall2  
 ![ransac wall1 and wall2](results/wall2_ssift_affine_ransac_with_wall1.png)
-![stitch wall1 and wall2](results/wall2_ssift_affine_stitch_with_wall1.png)
+![stitch wall1 and wall2](results/wall2_ssift_affine_stitch_with_wall1.png)  
 Using SSIFT produces result that is much better than using SSD.
 But I think this is due to the mechanism we use to determine the matchings between two points.
 
 wall1 and wall3  
 ![ransac wall1 and wall3](results/wall3_ssift_affine_ransac_with_wall1.png)
-![stitch wall1 and wall3](results/wall3_ssift_affine_stitch_with_wall1.png)
+![stitch wall1 and wall3](results/wall3_ssift_affine_stitch_with_wall1.png)  
 Using SSIFT cannot produce good result, either.
 
 ### RANSAC and Stitching using Perspective and SSIFT
