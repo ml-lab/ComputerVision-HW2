@@ -268,6 +268,7 @@ wall1 and wall3
 ![ransac wall1 and wall3](results/wall3_ssift_affine_ransac_with_wall1.png)
 ![stitch wall1 and wall3](results/wall3_ssift_affine_stitch_with_wall1.png)  
 Using SSIFT cannot produce good result, either.
+This is because of the big difference in the gradients.
 
 ### RANSAC and Stitching using Perspective and SSIFT
 bikes1 and bikes2  
